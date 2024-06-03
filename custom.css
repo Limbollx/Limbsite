@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Krub:700|Krub:400');
+
+:root[data-theme="light"] {
+    --text: #09110f;
+    --background: #f4fbf9;
+    --primary: #44c1a1;
+    --secondary: #85e0c9;
+    --accent: #58dfbd;
+}
+:root[data-theme="dark"] {
+    --text: #eef6f4;
+    --background: #040b09;
+    --primary: #3ebb9c;
+    --secondary: #1f7a63;
+    --accent: #20a785;
+}
+
+body {
+  font-family: 'Krub';
+  font-weight: 400;
+  background: var(--background);
+  color: var(--text);
+  transition: 0.2s ease-in;
+  max-width: 100%;
+  min-height: 1000px;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Krub';
+  font-weight: 700;
+}
+
+html {font-size: 100%;}
+
+h1 {font-size: 3.366rem; color: var(--primary);}
+
+h2 {font-size: 2.525rem;}
+
+h3 {font-size: 1.894rem;}
+
+h4 {font-size: 1.421rem;}
+
+h5 {font-size: 1.066rem;}
+
+small {font-size: 0.600rem;}
+
+.darkswitch {
+  position: fixed;
+  bottom: 2%;
+  right: 1%;
+  height: 50px;
+  width: 50px;
+  font-size: 1.6rem;
+  border-radius: 100px;
+  background: var(--text);
+  border: unset;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.darkswitch:active {
+  transform: scale(0.9);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.transRight {
+  transition: 0.2s ease;
+}
+
+.transRight:hover {
+  transform: translateX(20px);
+}
+
+.navbar {
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  background-color: var(--primary);
+}
