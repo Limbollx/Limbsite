@@ -16,3 +16,13 @@ function changeTheme() {
   localStorage.setItem("theme", JSON.stringify(currentTheme));
   setTheme();
 }
+
+dropped = false;
+
+function dropping() {
+  if (dropped === true) {
+    currentTheme = false;
+  } else {
+    currentTheme = true;
+  }
+}
