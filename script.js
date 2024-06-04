@@ -26,3 +26,9 @@ function dropping() {
     currentTheme = true;
   }
 }
+function home() {
+    document.documentElement.scrollTop = 0;
+}
+function social() {
+  document.documentElement.scrollTop = 700;
+}
