@@ -92,6 +92,7 @@ small {font-size: 0.600rem;}
   transform: translateX(20px);
 }
 
+.sspace {margin-bottom: 5%;}
 .space {margin-bottom: 17.5%;}
 .bspace {margin-bottom: 20%;}
 
@@ -148,4 +149,16 @@ li a:hover:not(.active) {
 .logo:hover {
   transition: 0.5s;
   transform: rotate(360deg);
+}
+
+.social {
+  width: 128px;
+  height: auto;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.social:hover {
+  filter: opacity(80%);
+  transform: translateY(10px);
 }
