@@ -32,3 +32,14 @@ function home() {
 function social() {
   document.documentElement.scrollTop = 700;
 }
+
+function handleSocialAppearance() {
+  const scrollPosition = window.scrollY;
+  const socialAppear = scrollPosition > 600 && scrollPosition < 1000;
+
+  document.documentElement.setAttribute('social-appear', socialAppear);
+}
+
+window.addEventListener('scroll', handleSocialAppearance);
+
+handleSocialAppearance();

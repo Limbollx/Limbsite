@@ -155,10 +155,18 @@ li a:hover:not(.active) {
   width: 128px;
   height: auto;
   cursor: pointer;
-  transition: 0.2s ease-in;
+  transition: 0.5s ease-in;
 }
 
-.social:hover {
-  filter: opacity(80%);
-  transform: translateY(10px);
+[social-appear=false] .social {
+  filter: opacity(0%);
+}
+[social-appear=false] .discord {
+  transform: translateX(-150%);
+}
+[social-appear=false] .spotify {
+  transform: translateX(150%);
+}
+[social-appear=false] .instagram {
+  transform: translateY(-150%);
 }
