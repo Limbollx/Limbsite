@@ -78,6 +78,7 @@ small {font-size: 0.600rem;}
   flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .container div {
@@ -186,7 +187,8 @@ li a:hover:not(.active) {
 .project {
   width: 400px;
   border-radius: 15px;
-  transition: 0.5s ease-in-out;
+  transform: translateX(0);
+  filter: opacity(100%);
 }
 .project:hover {
   transition: 0.2s ease-in-out;
@@ -195,7 +197,7 @@ li a:hover:not(.active) {
 }
 
 [project-appear=false] .up_project {
-  transform: translateX(250%);
-  overflow-x: hidden;
+  transform: translateX(100vw);
   filter: opacity(0%);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
