@@ -2,7 +2,7 @@
 
 :root[data-theme="light"] {
   --text: #0e1416;
-  --background: #e8eff0;
+  --background: #eef1f1;
   --primary: #167998;
   --secondary: #6dcce8;
   --accent: #0fb4e6;
@@ -24,7 +24,7 @@ body {
   color: var(--text);
   transition: 0.2s ease-in;
   max-width: 100%;
-  min-height: 2000px;
+  min-height: 3000px;
   overflow-x: hidden;
 }
 
@@ -80,6 +80,10 @@ small {font-size: 0.600rem;}
   text-align: center;
 }
 
+.container div {
+  flex: 0 1 33.333%;
+  margin: 20px;
+}
 .vertical_container {
   display: flex;
   flex-direction: column;
@@ -161,12 +165,36 @@ li a:hover:not(.active) {
 [social-appear=false] .social {
   filter: opacity(0%);
 }
-[social-appear=false] .discord {
-  transform: translateX(-150%);
+.social:hover {
+  transition: 0.2s ease-in;
+  filter: opacity(80%);
+  transform: translateY(-5%);
 }
-[social-appear=false] .spotify {
-  transform: translateX(150%);
+[social-appear=false] .down_social {
+  transform: translateY(-25%);
 }
-[social-appear=false] .instagram {
-  transform: translateY(-150%);
+[social-appear=false] .up_social {
+  transform: translateY(25%);
+}
+
+.outline-font {
+  font-family: 'Kurb', sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--text);
+}
+
+.project {
+  width: 400px;
+  border-radius: 15px;
+  transition: 0.5s ease-in-out;
+}
+.project:hover {
+  transition: 0.2s ease-in-out;
+  filter: opacity(80%);
+  transform: translateY(-5%);
+}
+
+[project-appear=false] .up_project {
+  transform: translateX(250%);
+  filter: opacity(0%);
 }

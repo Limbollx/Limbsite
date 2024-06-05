@@ -32,14 +32,25 @@ function home() {
 function social() {
   document.documentElement.scrollTop = 700;
 }
+function project() {
+  document.documentElement.scrollTop = 1700;
+}
 
 function handleSocialAppearance() {
   const scrollPosition = window.scrollY;
-  const socialAppear = scrollPosition > 600 && scrollPosition < 1000;
+  const socialAppear = scrollPosition > 600 && scrollPosition < 1400;
 
   document.documentElement.setAttribute('social-appear', socialAppear);
 }
+function handleProjectAppearance() {
+  const scrollPosition = window.scrollY;
+  const projectAppear = scrollPosition > 1500 && scrollPosition < 2100;
+
+  document.documentElement.setAttribute('project-appear', projectAppear);
+}
 
 window.addEventListener('scroll', handleSocialAppearance);
+window.addEventListener('scroll', handleProjectAppearance);
 
 handleSocialAppearance();
+handleProjectAppearance();
