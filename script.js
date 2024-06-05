@@ -36,21 +36,31 @@ function project() {
   document.documentElement.scrollTop = 1700;
 }
 
-function handleSocialAppearance() {
+function handleAppearances() {
   const scrollPosition = window.scrollY;
-  const socialAppear = scrollPosition > 600 && scrollPosition < 1400;
 
-  document.documentElement.setAttribute('social-appear', socialAppear);
-}
-function handleProjectAppearance() {
-  const scrollPosition = window.scrollY;
+  const socialAppear = scrollPosition > 600 && scrollPosition < 1400;
   const projectAppear = scrollPosition > 1500 && scrollPosition < 2100;
 
+  document.documentElement.setAttribute('social-appear', socialAppear);
   document.documentElement.setAttribute('project-appear', projectAppear);
 }
 
-window.addEventListener('scroll', handleSocialAppearance);
-window.addEventListener('scroll', handleProjectAppearance);
+window.addEventListener('scroll', handleAppearances);
 
-handleSocialAppearance();
-handleProjectAppearance();
+handleAppearances();
+var logofall = 0
+
+function bounce() {
+  const img = document.getElementById('bouncing');
+  img.classList.add('bounce');
+  if (logofall != 10) {
+    img.addEventListener('animationend', () => {
+      img.classList.remove('bounce');
+      var logofall = (logofall + 1)
+    }, { once: true });
+  }
+  else {
+    document.documentElement.setAttribute('logo-fall', true);
+  }
+}

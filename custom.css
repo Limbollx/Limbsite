@@ -78,13 +78,13 @@ small {font-size: 0.600rem;}
   flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: center;
-  overflow-x: hidden;
 }
 
 .container div {
   flex: 0 1 33.333%;
   margin: 20px;
 }
+
 .vertical_container {
   display: flex;
   flex-direction: column;
@@ -148,6 +148,7 @@ li a:hover:not(.active) {
 
 .logo {
   border-radius: 100%;
+  cursor: pointer;
   box-shadow: var(--shadow) 0px 10px 10px;;
 }
 
@@ -187,8 +188,7 @@ li a:hover:not(.active) {
 .project {
   width: 400px;
   border-radius: 15px;
-  transform: translateX(0);
-  filter: opacity(100%);
+  transition: 0.5s ease-in-out;
 }
 .project:hover {
   transition: 0.2s ease-in-out;
@@ -199,5 +199,26 @@ li a:hover:not(.active) {
 [project-appear=false] .up_project {
   transform: translateX(100vw);
   filter: opacity(0%);
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0) rotate(0deg);
+  }
+  40% {
+      transform: translateY(-30%) rotate(15deg);
+  }
+  60% {
+      transform: translateY(-15%) rotate(-15deg);
+  }
+}
+
+.bounce {
+  animation: bounce 0.2s;
+}
+
+[logo-fall=true] .logo {
+  transition: 0.5s ease-in;
+  transform: translateY(-100%);
+  filter: opacity(0%);
 }
