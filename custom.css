@@ -196,5 +196,6 @@ li a:hover:not(.active) {
 
 [project-appear=false] .up_project {
   transform: translateX(250%);
+  overflow-x: hidden;
   filter: opacity(0%);
 }
