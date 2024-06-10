@@ -5,24 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Limbsite</title>
     <link rel="stylesheet" href="./custom.css" />
-    <script src="./script.js"></script>
+    <script src="./scripts/script.js"></script>
     <link rel="icon" href="./images/logo.png">
 </head>
 <body>
     <nav>
-        <li><a onclick="home()">Home</a></li>
-        <li><a onclick="social()">Socials</a></li>
-        <li><a onclick="project()">Projects</a></li>
-        <li style="float: right;"><img class="switchingimg" src="./images/menu.png" onclick="dropping()"></li>
-    </nav>
+        <li class="title-li"><p class="name">Limbsite</p></li>
+        <li><a onclick="home()"><img class="darkimg navico" src="./images/home.png"> Home</a></li>
+        <li><a onclick="social()"><img class="darkimg navico" src="./images/social.png"> Socials</a></li>
+        <li><a onclick="project()"><img class="darkimg navico" src="./images/project.png"> Projects</a></li>
+      </nav>      
     <div id="home" class="space"></div>
     <button onclick="changeTheme()" class="darkswitch">🌓</button>
     <main>
         <div class="container">
             <div>
-                <h1>
-                    Welcome
-                </h1>
+                <h1>Welcome</h1>
                     <h5>I'm Limboll and here is my <small>not so</small> awesome website </h5>
                     <p>I write stuff on here from time to time</p>
                     <p>a little bit like a card or a blog but on a website so it's pretty!</p>
@@ -32,9 +30,7 @@
         <div class="bspace"></div>
         <div class="vertical_container">
             <div class="sspace">
-                <h1>
-                    My different socials
-                </h1>
+                <h1><img class="darkimg navico-b" src="./images/social.png">socials</h1>
             </div>
         </div>
         <div class="container">
@@ -74,11 +70,8 @@
         <div class="sspace"></div>
         <div class="vertical_container">
             <div class="sspace">
-                <h1>
-                    My projects
-                </h1>
+                <h1><img class="darkimg navico-b" src="./images/project.png">projects</h1>
             </div>
-        </div>
         <div class="container">
             <div>
                 <img class="project up_project" src="./images/holor.png">
@@ -92,6 +85,13 @@
                 <small>12 march 2024</small>
             </div>
         </div>
+        <div class="space"></div>
+        <div class="vertical_container">
+            <h1>canvas</h1>
+        </div>
+        <script src="./scripts/canvas.js"></script>
+        <canvas>
+        </canvas>
     </main>
 </body>
 </html>
