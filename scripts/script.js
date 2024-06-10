@@ -21,15 +21,12 @@ function changeTheme() {
 
 function home() {
     document.documentElement.scrollTop = 0;
-    switchNavImages();
 }
 function social() {
   document.documentElement.scrollTop = 800;
-  switchNavImages();
 }
 function project() {
   document.documentElement.scrollTop = 1700;
-  switchNavImages();
 }
 
 function handleAppearances() {
@@ -44,35 +41,35 @@ function handleAppearances() {
   switchNavImages();
 }
 
-function switchNavImages() {
-  const sections = [
-    {
-      name: 'home',
-      start: 0,
-      end: 600,
-      img: './images/home.png',
-      e_img: './images/e_home.png'
-    },
-    {
-      name: 'social',
-      start: 600,
-      end: 1400,
-      img: './images/social.png',
-      e_img: './images/e_social.png'
-    },
-    {
-      name: 'project',
-      start: 1400,
-      end: 2100,
-      img: './images/project.png',
-      e_img: './images/e_project.png'
-    }
-  ];
+const sections = [
+  {
+    name: 'home',
+    start: -1,
+    end: 600,
+    img: './images/home.png',
+    e_img: './images/e_home.png'
+  },
+  {
+    name: 'social',
+    start: 599,
+    end: 1400,
+    img: './images/social.png',
+    e_img: './images/e_social.png'
+  },
+  {
+    name: 'project',
+    start: 1399,
+    end: 2600,
+    img: './images/project.png',
+    e_img: './images/e_project.png'
+  }
+];
 
+function switchNavImages() {
   const scrollPosition = window.scrollY;
 
   sections.forEach(section => {
-    const navIcon = document.querySelector(`.navico[src="${section.img}"]`);
+    const navIcon = document.querySelector(`.navico[src="${section.img}"]`) || document.querySelector(`.navico[src="${section.e_img}"]`);
     if (navIcon) {
       if (scrollPosition > section.start && scrollPosition < section.end) {
         navIcon.src = section.img;
@@ -84,7 +81,6 @@ function switchNavImages() {
 }
 
 window.addEventListener('scroll', handleAppearances);
-
 handleAppearances();
 
 var logofall = 0
