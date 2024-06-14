@@ -1,7 +1,6 @@
 let currentTheme = JSON.parse(localStorage.getItem("theme"));
-if (currentTheme === 'dark') {
-  setTheme();
-}
+setTheme();
+
 
 function setTheme() {
   document.documentElement.setAttribute('data-theme', currentTheme);
@@ -23,22 +22,10 @@ function home() {
     document.documentElement.scrollTop = 0;
 }
 function social() {
-  document.documentElement.scrollTop = 800;
+  document.documentElement.scrollTop = 900;
 }
 function project() {
-  document.documentElement.scrollTop = 1700;
-}
-
-function handleAppearances() {
-  const scrollPosition = window.scrollY;
-
-  const socialsight = scrollPosition > 600 && scrollPosition < 1400;
-  const projectsight = scrollPosition > 1500 && scrollPosition < 2100;
-
-  document.documentElement.setAttribute('social-sight', socialsight);
-  document.documentElement.setAttribute('project-sight', projectsight);
-
-  switchNavImages();
+  document.documentElement.scrollTop = 1900;
 }
 
 const sections = [
@@ -51,15 +38,15 @@ const sections = [
   },
   {
     name: 'social',
-    start: 599,
-    end: 1400,
+    start: 699,
+    end: 1600,
     img: './images/social.png',
     e_img: './images/e_social.png'
   },
   {
     name: 'project',
-    start: 1399,
-    end: 2600,
+    start: 1599,
+    end: 3000,
     img: './images/project.png',
     e_img: './images/e_project.png'
   }
@@ -80,8 +67,8 @@ function switchNavImages() {
   });
 }
 
-window.addEventListener('scroll', handleAppearances);
-handleAppearances();
+window.addEventListener('scroll', switchNavImages);
+switchNavImages();
 
 var logofall = 0
 
