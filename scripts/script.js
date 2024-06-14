@@ -22,10 +22,10 @@ function home() {
     document.documentElement.scrollTop = 0;
 }
 function social() {
-  document.documentElement.scrollTop = 900;
+  document.documentElement.scrollTop = 1100;
 }
 function project() {
-  document.documentElement.scrollTop = 1900;
+  document.documentElement.scrollTop = 2000;
 }
 
 const sections = [
