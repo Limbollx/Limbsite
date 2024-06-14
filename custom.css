@@ -8,7 +8,8 @@
   --primary: #167998;
   --secondary: #6dcce8;
   --accent: #0fb4e6;
-  --shadow: rgba(14, 20, 22, 0.3)
+  --shadow: rgba(14, 20, 22, 0.3);
+  --glassy: rgba(255, 255, 255, 0.3);
 }
 :root[data-theme="dark"] {
   --text: #e9eff1;
@@ -16,7 +17,8 @@
   --primary: #67cbe9;
   --secondary: #177592;
   --accent: #19bef0;
-  --shadow: rgba(103, 203, 233, 0.3)
+  --shadow: rgba(103, 203, 233, 0.3);
+  --glassy: rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -102,7 +104,6 @@ small {font-size: 0.600rem;}
   background: var(--text);
   border: unset;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 10px;
   z-index: 10;
 }
 
@@ -233,6 +234,10 @@ li a:hover {
   filter: invert(100%);
 }
 
+.whited {
+  filter: invert(100%);
+}
+
 .logo {
   position: relative;
   border-radius: 100%;
@@ -269,7 +274,7 @@ li a:hover {
 }
 
 .glassy {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--glassy);
   backdrop-filter: blur(20px);
   border-radius: 5px;
   padding: 50px 40px 50px 0;
